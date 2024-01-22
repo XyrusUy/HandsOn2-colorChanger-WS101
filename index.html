@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-image: url(bcg.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #color-box{
+            border: solid;
+            width: 300px;
+            height: 300px;
+            margin-top: 100px;
+            border-radius: 20px;
+
+
+        }
+        #btn {
+            margin: auto;
+            display: flex;
+            width: 100px;
+            height: 70px;
+            margin-top: 50px;
+            font-family: 'Alfa Slab One', serif;
+            font-family: 'Luckiest Guy', cursive;
+            padding-top: 20px;
+            font-size: 20px;
+            border: solid;
+            background-color: purple;
+            transition: width 1s, height 2s;
+        }
+
+        #btn:hover {
+            box-shadow: 0 0 5px gold,
+            0 0 25px gold, 0 0 50px gold,
+            0 0 100px gold, 0 0 200px gold;
+            width: 120px;
+            height: 80px;
+            background-color: cyan;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="color-box"></div>
+    <button id="btn">Change Color</button>
+
+    <script>
+        let btn = document.getElementById('btn');
+        let box = document.getElementById('color-box');
+
+        box.style.backgroundColor = 'blue'
+        function changeColor (){
+            
+            if (box.style.backgroundColor === 'blue'){
+                box.style.backgroundColor = 'green'
+            }else {
+                box.style.backgroundColor = 'blue'
+            }
+        }
+        btn.addEventListener('click', changeColor)
+        
+    </script>
+</body>
+</html>
